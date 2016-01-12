@@ -1,0 +1,154 @@
+/* POST FOOTER */
+
+.post-footer {
+	overflow: hidden;
+	margin: 65px 0 35px;
+
+	.post-tags {
+		float: left;
+		margin-bottom: 20px;
+
+		a {
+			font-family: $font_sub_header;
+			font-size: 11px;
+			font-weight: 400;
+			display: inline-block;
+			margin: 0 5px 10px 0;
+			padding: 10px 15px;
+			text-transform: uppercase;
+			color: #1d1e1f;
+			border: 0;
+			background: #eff5f8;
+			@include transition(background-color 0.1s ease-out, color 0.1s ease-out);
+
+			&:hover {
+				color: #e2e6ea;
+				border-color: transparent;
+				background-color: #3d4042;
+			}
+		}
+	}
+
+	.post-social-share {
+		float: right;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: block;
+			float: left;
+			margin: 0 10px 0 0;
+			margin-right: 5px;
+			padding: 0;
+			list-style: none;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		.title {
+			font-family: $font_sub_header;
+			font-size: 15px;
+			margin: 0 15px 0 0;
+			text-transform: uppercase;
+			color: #d1d1d1;
+		}
+
+		a {
+			font-size: 14px;
+			line-height: 36px;
+			display: block;
+			width: 35px;
+			height: 35px;
+			text-align: center;
+			color: #fff;
+			border: 0;
+			border-radius: 2px;
+			background: #4a4c51;
+			@include transition(background-color 0.2s ease-in-out);
+
+			&:hover {
+				border-color: transparent;
+			}
+
+			&.twitter:hover {
+				background-color: $twitter_color;
+			}
+
+			&.facebook:hover {
+				background-color: $facebook_color;
+			}
+
+			&.google:hover {
+				background-color: $google_color;
+			}
+
+			&.pinterest:hover {
+				background-color: $pinterest_color;
+			}
+
+			&.linkedin:hover {
+				background-color: $linkedin_color;
+			}
+
+			&.reddit:hover {
+				background-color: $reddit_color;
+			}
+
+			&.email:hover {
+				background-color: $email_color;
+			}
+		}
+	}
+
+	@media (max-width: 720px) {
+		margin: 55px 0 35px;
+	}
+
+	@media (max-width: 490px) {
+		margin: 45px 0 25px;
+	}
+}
+
+.post-footer-header {
+	position: relative;
+	margin: 0 0 55px;
+	text-align: center;
+	color: #1c1d1e;
+
+	h3 {
+		font-family: $font_sub_header;
+		font-size: 20px;
+		position: relative;
+		z-index: 200;
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0 25px;
+		text-transform: uppercase;
+		background: #fff;
+	}
+
+	&:before {
+		position: absolute;
+		top: 19px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		content: '';
+		background: #efefef;
+	}
+
+	i {
+		margin-right: 10px;
+	}
+
+	@media (max-width: 720px) {
+		margin: 0 0 50px;
+	}
+
+	@media (max-width: 490px) {
+		margin: 0 0 45px;
+	}
+}

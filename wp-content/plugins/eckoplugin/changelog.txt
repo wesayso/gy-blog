@@ -1,0 +1,21 @@
+ECKO PLUGIN CHANGELOG
+
+2.4.2
+
+	+ Added: Shortcode descriptions to shortcode post output
+
+
+2.4.1
+	
+	+ Added: Retain plugin options on theme switch
+	+ Improved: Identify theme specific shortcodes by theme TextDomain
+	+ Other: Transitioned to GulpJS from GruntJS
+	- Fixed: 'Ecko Related' widget can will now only be shown on is_single()
+
+
+2.3.0
+	
+	+ Added: Slate theme shortcodes
+	+ Improved: Multi-Language support
+	+ Improved: Plugin constants
+	+ Improved: Code formatting changes

@@ -1,0 +1,90 @@
+/* PAGE FORMAT STYLES */
+
+body.page {
+	.post-title .category {
+		display: none;
+	}
+
+	.post-title .comments,
+	.post-title .author,
+	.post-title .date {
+		display: none;
+	}
+
+	.post-author-profile {
+		display: none;
+	}
+
+	.post-title-standard hr {
+		margin: 25px 0 55px;
+	}
+
+	.post-footer, .post-footer .post-social-share {
+		display: none;
+	}
+
+	.post-title-standard h1 {
+		margin-top: 0;
+	}
+}
+
+body.blog {
+	.header .wrapper-body {
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+body.top-bar-visible {
+	padding-top: 80px;
+
+	.top-bar-main {
+		display: block !important;
+		opacity: 1 !important;
+	}
+}
+
+body.page-layout-full-width {
+	.page-main {
+		float: none;
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+		border: 0 !important;
+	}
+
+	aside.sidebar {
+		display: none;
+	}
+}
+
+body.page-layout-left-sidebar {
+	.page-main {
+		float: right;
+		padding-left: 4%;
+		padding-right: 0%;
+	}
+
+	aside.sidebar {
+		float: left;
+		padding-right: 4%;
+		padding-left: 0;
+		border-left: 0;
+		border-right: 1px solid #ececec;
+	}
+}
+
+body.admin-bar {
+	.top-bar-scroll {
+		top: 32px;
+
+		@media (max-width: 782px) {
+			top: 46px;
+		}
+
+		@media (max-width: 600px) {
+			top: 0;
+		}
+	}
+}

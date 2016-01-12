@@ -1,0 +1,18 @@
+<?php
+
+	/**
+	 * POST FORMAT - STATUS
+	 */
+
+?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="post-content">
+			<p class="excerpt"><?php echo ecko_truncate_by_words(get_the_excerpt(), 340, '...'); ?></p>
+			<ul class="meta">
+				<li class="author"><a href="<?php ecko_get_author_url(); ?>"><i class="fa fa-user"></i><?php the_author(); ?></a></li>
+				<li class="date"><a href="<?php the_permalink(); ?>"><i class="fa fa-clock-o"></i><time datetime="<?php the_time('Y-m-d'); ?>"><?php echo esc_html(ecko_date_format()); ?></time></a></li>
+				<li class="pinned"><i class="fa fa-thumb-tack"></i></li>
+			</ul>
+		</div>
+	</article>

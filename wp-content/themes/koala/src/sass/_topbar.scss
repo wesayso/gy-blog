@@ -1,0 +1,408 @@
+/* TOPBAR STYLES */
+
+.top-bar {
+	position: relative;
+	z-index: 300;
+
+	&.top-bar-solid {
+		background: #0d0d0e;
+
+		.wrapper-body {
+			border: 0;
+		}
+	}
+
+	&.top-bar-scroll {
+		position: fixed;
+		z-index: 400;
+		top: 0;
+		display: none;
+		width: 100%;
+
+		&.sticky {
+			.wrapper-body {
+				max-height: 57px;
+				padding: 14px 0;
+				@include transition(max-height 0.3s ease-out, padding 0.3s ease-out);
+			}
+
+			nav ul a {
+				padding: 9px 12px 26px;
+				@include transition(padding 0.3s ease-out);
+			}
+
+			nav ul li ul {
+				top: 46px;
+				@include transition(top 0.3s ease-out);
+			}
+
+			nav ul li ul li a {
+				padding: 15px 10px;
+			}
+		}
+
+		.responsivemenu {
+			top: 65px;
+		}
+
+		.searchbar {
+			bottom: -90px;
+		}
+
+		@media (max-width: 985px) {
+			min-height: 65px;
+		}
+	}
+
+	.wrapper-body {
+		position: relative;
+		max-height: 90px;
+		padding: 28px 0;
+		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid rgba(#fff, 0.25);
+	}
+
+	.logo {
+		float: left;
+
+		img {
+			max-height: 35px;
+			width: auto !important;
+		}
+
+		h2 {
+			font-family: $font_sub_header;
+			font-size: 22px;
+			line-height: normal;
+			margin: 3px 0 0;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	nav ul {
+		float: right;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			display: block;
+			float: left;
+
+			a:hover {
+				color: #c2c2c2;
+			}
+		}
+
+		a,
+		span {
+			font-family: $font_sub_header;
+			font-size: 14px;
+			display: inline-block;
+			padding: 9px 12px 35px;
+			cursor: pointer;
+			text-transform: uppercase;
+			color: #fff;
+			@include transition(color 0.15s ease-in);
+
+			&:hover {
+				color: #c2c2c2;
+			}
+		}
+
+		i {
+			font-size: 12px;
+			margin-left: 10px;
+			vertical-align: 1px;
+		}
+
+		> li:before {
+			font-family: 'arial';
+			font-size: 8px;
+			content: '\25CF';
+			vertical-align: 3px;
+			color: #6d717e;
+		}
+
+		> li:first-of-type:before {
+			content: '';
+		}
+
+		> li:hover ul {
+			display: block;
+		}
+
+		li ul {
+			position: absolute;
+			z-index: 300;
+			top: 61px;
+			right: 0;
+			display: none;
+			width: 225px;
+			padding: 10px;
+			color: #fff;
+			background: #0d0d0e;
+
+			&:before {
+				position: absolute;
+				top: -10px;
+				right: 7px;
+				width: 0;
+				height: 0;
+				content: '';
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid #0d0d0e;
+				border-left: 10px solid transparent;
+			}
+
+			li {
+				display: block;
+				float: none;
+				text-align: right;
+
+				a {
+					@include transition(padding-right 0.1s ease-in);
+				}
+
+				&:hover a {
+					padding-right: 15px !important;
+					color: #fff;
+				}
+
+				&:after {
+					display: block;
+					float: right;
+					width: 10%;
+					height: 1px;
+					margin-right: 15px;
+					content: '';
+					background: #232626;
+				}
+
+				&:last-of-type:after {
+					display: none;
+				}
+			}
+
+			a {
+				font-size: 11px;
+				display: block;
+				padding: 15px 10px;
+				color: #fff;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			li:before {
+				content: '';
+			}
+		}
+
+		@media (max-width: 985px) {
+			display: none;
+		}
+	}
+
+	.responsivemenu {
+		position: absolute;
+		top: 90px;
+		display: none;
+		width: 100%;
+		padding: 15px 0;
+		text-align: right;
+		background: #0d0d0e;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			font-family: $font_sub_header;
+			margin: 0;
+			padding: 0;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		li a {
+			display: inline-block;
+			padding: 15px 30px;
+			color: #fff;
+			outline: none;
+			@include transition(padding 0.125s ease-out);
+
+			i {
+				font-size: 13px;
+				color: #fff;
+			}
+
+			&:hover {
+				padding-right: 35px;
+				color: #fff;
+
+				i {
+					color: #fff;
+				}
+			}
+		}
+
+		ul li ul li {
+			display: block;
+		}
+
+		i {
+			@include transition(color 0.25s ease-in-out);
+		}
+
+		.sub-menu {
+			display: none;
+			width: 100%;
+			margin: 0;
+			margin-bottom: 10px;
+			padding: 0;
+			@include transition(none);
+
+			li:before {
+				display: none;
+			}
+
+			li:last-child {
+				border: 0;
+			}
+
+			li a {
+				font-size: 13px;
+				padding: 8px 30px 8px 31px;
+				color: #a2a2ab;
+
+				&:hover {
+					padding-right: 35px;
+					color: #fff;
+				}
+			}
+		}
+
+		i {
+			margin-left: 7px;
+			color: #fff;
+		}
+
+		&:after {
+			margin-top: 20px;
+		}
+	}
+
+	.option {
+		font-size: 12px;
+		line-height: 30px;
+		float: right;
+		width: 30px;
+		height: 30px;
+		margin-top: 3px;
+		margin-left: 15px;
+		cursor: pointer;
+		text-align: center;
+		color: #111213;
+		border-radius: 1px;
+		background-color: #fff;
+		@include transition(background-color 0.125s ease-in-out);
+
+		&.responsivenav {
+			display: none;
+		}
+
+		&:hover {
+			background-color: rgba(#fff, 0.8);
+		}
+
+		@media (max-width: 985px) {
+			&.responsivenav {
+				display: block;
+			}
+		}
+	}
+
+	.searchbar {
+		font-family: $font_sub_header;
+		position: absolute;
+		z-index: 200;
+		bottom: -91px;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 90px;
+		text-transform: uppercase;
+		color: #fff;
+		background: #121213;
+
+		input {
+			font-size: 16px;
+			width: 100%;
+			height: 90px;
+			padding: 35px;
+			text-transform: uppercase;
+			color: #fff;
+			border: 0;
+			background: transparent;
+
+			&:focus,
+			&:active {
+				outline: none;
+			}
+
+			&::-webkit-input-placeholder {
+				opacity: 1;
+				color: #fff;
+			}
+
+			&:-moz-placeholder {
+				opacity: 1;
+				color: #fff;
+			}
+
+			&::-moz-placeholder {
+				opacity: 1;
+				color: #fff;
+			}
+
+			&:-ms-input-placeholder {
+				opacity: 1;
+				color: #fff;
+			}
+		}
+
+		span {
+			font-size: 14px;
+			position: absolute;
+			top: 22px;
+			right: 29px;
+			padding: 12px 20px;
+			cursor: pointer;
+			color: #f7f7f7;
+			background: #2a2a2e;
+			@include transition(background 0.2s ease-in-out);
+
+			&:hover {
+				color: #f7f7f7;
+				background: #505054;
+			}
+		}
+	}
+
+	@media (max-width: 985px) {
+		.searchnav {
+			display: none !important;
+		}
+	}
+
+}

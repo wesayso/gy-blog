@@ -1,0 +1,215 @@
+/* AUTHOR PROFILE */
+
+.post-author-profile {
+	margin-bottom: 65px;
+	border-top: 1px solid #efefef;
+
+	.inner {
+		max-width: 75%;
+		margin: 0 auto;
+		padding: 65px 0 0;
+		text-align: center;
+	}
+
+	.info {
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.profile {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+
+		img {
+			max-width: 100%;
+			border-radius: 90px;
+		}
+	}
+
+	hr {
+		width: 50%;
+		height: 1px;
+		margin: 30px auto;
+		border: 0;
+		background: #e5e5e5;
+	}
+
+	.meta {
+		display: inline-block;
+		margin-left: 20px;
+		text-align: left;
+		vertical-align: 12px;
+	}
+
+	.meta .title,
+	.meta .twittertag {
+		font-family: $font_sub_header;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: normal;
+		color: #6d7578;
+
+		a {
+			color: #6d7578;
+		}
+	}
+
+	.meta .title {
+		display: none;
+	}
+
+	.meta h3 {
+		font-family: $font_sub_header;
+		font-size: 22px;
+		font-weight: 400;
+		line-height: normal;
+		margin: 0;
+		letter-spacing: -.5px;
+		text-transform: none;
+
+		a {
+			color: #373c3d;
+		}
+	}
+
+	.meta .twittertag {
+		font-size: 13px;
+		text-transform: none;
+		color: #818181;
+
+		&:hover {
+			color: #5c5c5c;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 30px;
+		margin: 20px 0 25px;
+		color: #454a4b;
+	}
+
+	.authorsocial {
+		display: inline-block;
+		overflow: hidden;
+		margin: 10px 0 0;
+		padding: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			float: none;
+			margin-bottom: 10px;
+			margin-left: -3px;
+			padding: 0 3px;
+			border-right: 1px solid #e7e7e7;
+
+			a {
+				font-size: 15px;
+				display: block;
+				float: left;
+				width: 30px;
+				color: #646c6f;
+
+				&.twitter:hover {
+					color: $twitter_color;
+				}
+
+				&.facebook:hover {
+					color: $facebook_color;
+				}
+
+				&.google:hover {
+					color: $google_color;
+				}
+
+				&.dribbble:hover {
+					color: $dribbble_color;
+				}
+
+				&.instagram:hover {
+					color: $instagram_color;
+				}
+
+				&.github:hover {
+					color: $github_color_light;
+				}
+
+				&.rss:hover {
+					color: $rss_color;
+				}
+
+				&.youtube:hover {
+					color: $youtube_color;
+				}
+
+				&.pinterest:hover {
+					color: $pinterest_color;
+				}
+
+				&.linkedin:hover {
+					color: $linkedin_color;
+				}
+
+				&.reddit:hover {
+					color: $reddit_color;
+				}
+
+				&.skype:hover {
+					color: $skype_color;
+				}
+
+				&.tumblr:hover {
+					color: $tumblr_color;
+				}
+
+				&.vine:hover {
+					color: $vine_color;
+				}
+
+				&.vk:hover {
+					color: $vk_color;
+				}
+
+				&.flickr:hover {
+					color: $flickr_color;
+				}
+
+				&.stackoverflow:hover {
+					color: $stackoverflow_color;
+				}
+
+				&.twitch:hover {
+					color: $twitch_color;
+				}
+
+				&.vimeo:hover {
+					color: $vimeo_color;
+				}
+
+				&.weibo:hover {
+					color: $weibo_color;
+				}
+
+				&.email:hover {
+					color: $email_color;
+				}
+
+				&.soundcloud:hover {
+					color: $soundcloud_color;
+				}
+			}
+
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		.inner {
+			max-width: 100%;
+		}
+	}
+}
